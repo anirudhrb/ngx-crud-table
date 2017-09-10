@@ -12,6 +12,8 @@ before_script:
 
 script:
   - npm run build
+  - echo ${NPMRC} > .npmrc
+  - npm publish ./src/app/crud-table
 
 after_success:
   - npm test -- --browsers PhantomJS --watch=false

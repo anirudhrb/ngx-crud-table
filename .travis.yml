@@ -12,11 +12,11 @@ before_script:
 
 script:
   - npm run build
-  - echo ${NPMRC} > .npmrc
-  - npm publish ./src/app/crud-table
+  - npm test -- --browsers PhantomJS --watch=false
 
 after_success:
-  - npm test -- --browsers PhantomJS --watch=false
+  - echo ${NPMRC} > .npmrc
+  - npm publish ./src/app/crud-table
 
 notifications:
   email:

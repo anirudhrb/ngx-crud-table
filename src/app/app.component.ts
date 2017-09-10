@@ -13,8 +13,6 @@ import { Newable } from './crud-table/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-
   fooData: FooDataSource;
   dataType: Newable;
 

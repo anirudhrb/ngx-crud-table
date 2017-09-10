@@ -1,6 +1,6 @@
 {
   "name": "ngx-crud-table",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Angular table with support for CRUD operations",
   "main": "crud-table.module.ts",
   "scripts": {

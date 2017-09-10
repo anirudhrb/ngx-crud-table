@@ -18,3 +18,13 @@ build: off
   
 artifacts:
   - path: .\src\app\crud-table
+
+deploy_script:
+  - ps: |
+      if ($ENV:CONFIGURATION -eq "publish")
+      {
+        "//registry.npmjs.org/:_authToken=`$`{NPM_TOKEN`}" | Out-File (Join-Path $ENV:APPVEYOR_BUILD_FOLDER ".npmrc") -Encoding UTF8
+        iex "npm publish"
+      }
+    on:
+      branch: master
